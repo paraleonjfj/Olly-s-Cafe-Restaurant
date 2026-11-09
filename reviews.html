@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reviews | Olly's Lucena</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <!-- NAVIGATION BAR -->
+        <header>
+            <nav>
+                <a href="index.html">
+                    <img src="Olly's logo.png" alt="Olly's Logo" class="logo">
+                </a>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- REVIEWS HERO -->
+        <main>
+
+            <section class="reviews-hero">
+
+                <p>OLLY'S LUCENA CITY BRANCH</p>
+
+                <h1>Your Experience,<br>Our Inspiration.</h1>
+
+                <p class="reviews-intro">
+                    Every visit creates a story.
+                    Share your experience with us.
+                </p>
+
+                <a href="#write-review" class="review-button">
+                    WRITE A REVIEW →
+                </a>
+
+            </section>
+
+            <!-- REVIEW SUMMARY -->
+            <section class="review-summary">
+
+                <h2>Customer Reviews</h2>
+
+                <div class="rating-summary">
+
+                    <h3 id="average-rating">0.0</h3>
+
+                    <div>
+                        <div id="average-stars" class="average-stars">
+                            ☆☆☆☆☆
+                        </div>
+
+                        <p>
+                            <span id="review-count">0</span>
+                            customer reviews
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- WRITE A REVIEW -->
+            <section class="write-review" id="write-review">
+
+                <div class="review-heading">
+                    <p>SHARE YOUR EXPERIENCE</p>
+                    <h2>We'd love to hear from you.</h2>
+                </div>
+
+                <form id="review-form">
+
+                    <!-- CUSTOMER NAME -->
+                    <div class="form-group">
+
+                        <label for="customer-name">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customer-name"
+                            placeholder="Enter your name"
+                            maxlength="50"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- STAR RATING -->
+                    <div class="form-group">
+
+                        <label>Your Rating</label>
+
+                        <div class="star-rating" id="star-rating">
+
+                            <button type="button" data-rating="1">☆</button>
+                            <button type="button" data-rating="2">☆</button>
+                            <button type="button" data-rating="3">☆</button>
+                            <button type="button" data-rating="4">☆</button>
+                            <button type="button" data-rating="5">☆</button>
+
+                        </div>
+
+                        <input
+                            type="hidden"
+                            id="selected-rating"
+                            value="0"
+                        >
+
+                    </div>
+
+                    <!-- CUSTOMER COMMENT -->
+                    <div class="form-group">
+
+                        <label for="customer-comment">
+                            Your Review
+                        </label>
+
+                        <textarea
+                            id="customer-comment"
+                            placeholder="Tell us about your experience..."
+                            rows="5"
+                            maxlength="500"
+                            required
+                        ></textarea>
+
+                    </div>
+
+                    <!-- PHOTO UPLOAD -->
+                    <div class="form-group">
+
+                        <label for="review-photos">
+                            Add Photos (Optional)
+                        </label>
+
+                        <input
+                            type="file"
+                            id="review-photos"
+                            accept="image/*"
+                            multiple
+                        >
+
+                        <p class="upload-note">
+                            You can upload up to 2 photos.
+                            Maximum 300 KB per photo.
+                        </p>
+
+                        <div id="photo-preview" class="photo-preview"></div>
+
+                    </div>
+
+                    <!-- SUBMIT BUTTON -->
+                    <button type="submit" class="submit-review">
+                        SUBMIT REVIEW
+                    </button>
+
+                    <p id="review-message" class="review-message"></p>
+
+                </form>
+
+            </section>
+
+            <!-- CUSTOMER REVIEW CARDS -->
+            <section class="customer-reviews">
+
+                <div class="review-heading">
+                    <p>REAL EXPERIENCES</p>
+                    <h2>What our customers say.</h2>
+                </div>
+
+                <div id="reviews-container" class="reviews-grid">
+
+                    <!-- JavaScript will display reviews here -->
+
+                </div>
+
+                <p id="empty-reviews" class="empty-reviews">
+                    No reviews yet. Be the first to share your experience!
+                </p>
+
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2026 Olly’s. All Rights Reserved.</p>
+        </footer>
+
+        <script src="reviews.js"></script>
+
+    </body>
+</html>
